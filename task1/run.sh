@@ -5,7 +5,7 @@ EXTENSION="cpp"
 BACKUP_FOLDER="./backup"
 BACKUP_ARCHIVE_NAME="./backup.tar.gz"
 
-LOGFILE="./.run.log"
+#LOGFILE="./.run.log"
 
 while [[ $# -gt 0 ]]; do
       case $1 in
