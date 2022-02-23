@@ -40,7 +40,7 @@ done;
 
 if [[ ! -d "$BACKUP_FOLDER" ]]; then
       mkdir -p "$BACKUP_FOLDER";
-      echo "CREATED BACKUP FOLDER: $BACKUP_FOLDER" > $LOGFILE;
+      #echo "CREATED BACKUP FOLDER: $BACKUP_FOLDER" > $LOGFILE;
 fi;
 
 for FILE in $(find $INPUT_FOLDER -name "*.$EXTENSION"); do
@@ -60,3 +60,5 @@ for FILE in $(find $INPUT_FOLDER -name "*.$EXTENSION"); do
 done;
 
 tar -czf "$BACKUP_ARCHIVE_NAME" "$BACKUP_FOLDER"
+
+echo "done";
