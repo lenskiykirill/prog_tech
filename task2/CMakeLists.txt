@@ -9,7 +9,7 @@ add_subdirectory (${PROJECT_SOURCE_DIR}/B/)
 set (EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin/)
 
 include_directories (${PROJECT_SOURCE_DIR})
-include_directories (${PROJECT_SOURCE_DIR})
+#include_directories (${PROJECT_SOURCE_DIR})
 
 add_executable (C ${PROJECT_SOURCE_DIR}/C/main.cpp )
 

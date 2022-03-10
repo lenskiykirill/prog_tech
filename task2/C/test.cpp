@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
-#include "lib.h"
-#include "index.h"
+#include "B/lib.h"
+#include "A/index.h"
 
 TEST (index, simple_test) {
       ASSERT_EQ (5, fiver());
