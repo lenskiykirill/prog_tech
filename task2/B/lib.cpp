@@ -8,3 +8,7 @@ std::string hello () {
 
       return "You shall not pass my google test!";
 }
+
+int fourer () {
+      return 4;
+}

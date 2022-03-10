@@ -1,0 +1,3 @@
+/home/daud/Desktop/ProgTech/cmake/B/build/CMakeFiles/rebuild_cache.dir
+/home/daud/Desktop/ProgTech/cmake/B/build/CMakeFiles/edit_cache.dir
+/home/daud/Desktop/ProgTech/cmake/B/build/CMakeFiles/lib.dir

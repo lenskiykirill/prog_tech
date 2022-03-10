@@ -11,6 +11,15 @@ set (EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin/)
 include_directories (${PROJECT_SOURCE_DIR}/A)
 include_directories (${PROJECT_SOURCE_DIR}/B)
 
-add_executable (C ${PROJECT_SOURCE_DIR}/C/main.cpp)
+add_executable (C ${PROJECT_SOURCE_DIR}/C/main.cpp )
 
 target_link_libraries (C lib)
+
+enable_testing()
+find_package(GTest REQUIRED)
+
+add_executable (CTest ${PROJECT_SOURCE_DIR}/C/test.cpp) # ${PROJECT_SOURCE_DIR}/C/test.cpp)
+
+add_library (testing STATIC ${PROJECT_SOURCE_DIR}/C/test.cpp)
+
+target_link_libraries(CTest GTest::GTest GTest::Main lib testing)
