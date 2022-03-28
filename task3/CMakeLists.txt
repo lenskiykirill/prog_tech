@@ -3,7 +3,7 @@ project(SimpleLibrary)
 
 include_directories(include)
 
-if (ARM_BUILD STREQUAL "ON")
+#if (ARM_BUILD STREQUAL "ON")
 
       unset (CMAKE_SYSTEM_NAME)
       unset (CMAKE_SYSTEM_PROCESSOR)
@@ -25,7 +25,7 @@ if (ARM_BUILD STREQUAL "ON")
       set(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE ONLY)
 
       message (${CMAKE_CXX_COMPILER})
-endif()
+#endif()
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${SimpleLibrary_SOURCE_DIR}/bin)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${SimpleLibrary_SOURCE_DIR}/lib)
@@ -35,7 +35,7 @@ add_executable(Main main.cpp)
 add_executable(MainLib main_lib.cpp)
 
 if (CMAKE_INSTALL_PREFIX)
-      install (TARGETS Main MainLib
+      install (TARGETS Main MainLib buffer
                RUNTIME DESTINATION bin
                LIBRARY DESTINATION lib)
 endif()
