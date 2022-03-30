@@ -1,5 +1,13 @@
 cmake_minimum_required(VERSION 3.0)
 
+if (CMAKE_INSTALL_PREFIX)
+      set(CMAKE_SKIP_BUILD_RPATH FALSE)
+      set(CMAKE_BUILD_WITH_INSTALL_RPATH FALSE)
+
+      set(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/lib")
+      set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
+endif()
+
 if (ARM_BUILD STREQUAL "ON")
 
       unset (CMAKE_SYSTEM_NAME)
@@ -36,9 +44,14 @@ add_executable(Main main.cpp)
 add_executable(MainLib main_lib.cpp)
 
 if (CMAKE_INSTALL_PREFIX)
+      #      set(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/lib")
+      #      set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
+
       install (TARGETS Main MainLib buffer
                RUNTIME DESTINATION bin
                LIBRARY DESTINATION lib)
+      
+
 endif()
 
 target_link_libraries(MainLib buffer)

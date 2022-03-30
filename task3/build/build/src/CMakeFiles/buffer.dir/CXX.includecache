@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../../include/buffer.h
+string
+-
+
+/home/daud/Desktop/ProgTech/prog_tech/task3/src/buffer.cpp
+buffer.h
+-
+
