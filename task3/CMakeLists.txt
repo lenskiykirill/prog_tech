@@ -13,8 +13,8 @@ if (ARM_BUILD STREQUAL "ON")
 
       set (TOOLCHAIN "" CACHE FILEPATH "toolchain")
 
-      set (CMAKE_C_COMPILER ${TOOLCHAIN})#/aarch64-linux-gnu-gcc)
-      set (CMAKE_CXX_COMPILER ${TOOLCHAIN})#/aarch64-linux-gnu-g++)
+      set (CMAKE_C_COMPILER ${TOOLCHAIN})/aarch64-linux-gnu-gcc)
+      set (CMAKE_CXX_COMPILER ${TOOLCHAIN})/aarch64-linux-gnu-g++)
       
       set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
       set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
