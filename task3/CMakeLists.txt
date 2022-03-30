@@ -51,7 +51,8 @@ if (CMAKE_INSTALL_PREFIX)
 
       install (TARGETS Main MainLib buffer
                RUNTIME DESTINATION bin
-               LIBRARY DESTINATION lib)
+               LIBRARY DESTINATION lib
+               PUBLIC_HEADER DESTINATION include)
       
 
 endif()
