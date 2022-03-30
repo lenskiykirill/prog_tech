@@ -1,3 +1,0 @@
-/home/daud/Desktop/ProgTech/prog_tech/task3/build/build/bin/Main
-/home/daud/Desktop/ProgTech/prog_tech/task3/build/build/bin/MainLib
-/home/daud/Desktop/ProgTech/prog_tech/task3/build/build/lib/libbuffer.so
