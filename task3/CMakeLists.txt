@@ -43,6 +43,8 @@ add_subdirectory(src)
 add_executable(Main main.cpp)
 add_executable(MainLib main_lib.cpp)
 
+set_target_properties(MainLib PROPERTIES PUBLIC_HEADER "header.h")
+
 if (CMAKE_INSTALL_PREFIX)
       #      set(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/lib")
       #      set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
