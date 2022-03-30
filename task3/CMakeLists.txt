@@ -40,10 +40,11 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${SimpleLibrary_SOURCE_DIR}/bin)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${SimpleLibrary_SOURCE_DIR}/lib)
 
 add_subdirectory(src)
+
 add_executable(Main main.cpp)
 add_executable(MainLib main_lib.cpp)
 
-set_target_properties(buffer PROPERTIES PUBLIC_HEADER "header.h")
+set_target_properties(buffer PROPERTIES PUBLIC_HEADER "include/buffer.h")
 
 if (CMAKE_INSTALL_PREFIX)
       #      set(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/lib")
