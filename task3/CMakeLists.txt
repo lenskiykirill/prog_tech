@@ -1,9 +1,6 @@
 cmake_minimum_required(VERSION 3.0)
-project(SimpleLibrary)
 
-include_directories(include)
-
-#if (ARM_BUILD STREQUAL "ON")
+if (ARM_BUILD STREQUAL "ON")
 
       unset (CMAKE_SYSTEM_NAME)
       unset (CMAKE_SYSTEM_PROCESSOR)
@@ -16,8 +13,8 @@ include_directories(include)
 
       set (TOOLCHAIN "" CACHE FILEPATH "toolchain")
 
-      set (CMAKE_C_COMPILER ${TOOLCHAIN}/aarch64-linux-gnu-gcc)
-      set (CMAKE_CXX_COMPILER ${TOOLCHAIN}/aarch64-linux-gnu-g++)
+      set (CMAKE_C_COMPILER ${TOOLCHAIN})#/aarch64-linux-gnu-gcc)
+      set (CMAKE_CXX_COMPILER ${TOOLCHAIN})#/aarch64-linux-gnu-g++)
       
       set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
       set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
@@ -25,7 +22,11 @@ include_directories(include)
       set(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE ONLY)
 
       message (${CMAKE_CXX_COMPILER})
-#endif()
+endif()
+
+project(SimpleLibrary)
+
+include_directories(include)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${SimpleLibrary_SOURCE_DIR}/bin)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${SimpleLibrary_SOURCE_DIR}/lib)
