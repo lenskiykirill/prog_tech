@@ -30,8 +30,11 @@ RUN ["chmod", "644", "/opt/techprog/app.py"]
 
 USER "tp2022user"
 
+RUN ["mkdir", "bin"]
+RUN ["ln", "-s", "/bin/C", "./bin/C"]
+
 ENV PATH = "${PATH}:/home/tp2022user/.local/bin"
 RUN ["pip", "install", "-r", "/tmp/flask/requirements.txt"]
 
 
-CMD ["python3", "/opt/techprog/app.py", "--host", "0.0.0.0", "--port", "8089"]
+CMD ["python3", "/opt/techprog/app.py", "--host", "0.0.0.0", "--port", "8898"]
